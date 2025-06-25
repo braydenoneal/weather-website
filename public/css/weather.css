@@ -1,0 +1,399 @@
+body {
+  background-color: rgb(26, 28, 30);
+  color: #E3E2E4;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+body .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" -25, "opsz" 24;
+}
+body a {
+  text-decoration: none;
+  color: #E3E2E4;
+}
+body .icon {
+  width: 24px;
+  height: 24px;
+}
+body .image {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+body .image > img {
+  width: 100%;
+}
+body .desktop-navbar {
+  min-width: 256px;
+  box-sizing: border-box;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: min-width 0.2s;
+}
+body .desktop-navbar.small {
+  min-width: 88px;
+}
+body .desktop-navbar.small > .header > .text, body .desktop-navbar.small > a > .item > .text, body .desktop-navbar.small > a > .button > .text {
+  display: none;
+}
+body .desktop-navbar > .header {
+  display: flex;
+  padding: 18px 16px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+body .desktop-navbar > .header > .icon:hover {
+  cursor: pointer;
+}
+body .desktop-navbar > a > .button {
+  height: 56px;
+  width: auto;
+  background-color: #004A77;
+  border-radius: 16px;
+  color: #CFE5FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+body .desktop-navbar > a > .button > .icon {
+  position: absolute;
+  left: 16px;
+}
+body .desktop-navbar > a > .button.hidden {
+  visibility: hidden;
+}
+body .desktop-navbar > a > .item {
+  display: flex;
+  padding: 0 16px;
+  height: 56px;
+  border-radius: 28px;
+  align-items: center;
+  gap: 16px;
+}
+body .desktop-navbar > a > .item:hover {
+  background-color: #2b323a;
+}
+body .desktop-navbar > a > .item.selected {
+  background-color: #3E4853;
+  color: #D9E3F2;
+}
+body .desktop-navbar > a > .item.selected:hover {
+  background-color: #4a5460;
+}
+body .desktop-navbar > a > .item.selected .material-symbols-outlined {
+  font-variation-settings: "FILL" 1;
+}
+body .desktop-navbar > .filler {
+  flex-grow: 1;
+}
+body .mobile-navbar {
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  padding: 0 8px;
+  position: fixed;
+  bottom: 0;
+  background-color: #282F37;
+  width: 100%;
+  height: 80px;
+  justify-content: space-around;
+}
+body .mobile-navbar > a {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mobile-navbar > a > .item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+body .mobile-navbar > a > .item > .icon {
+  width: 64px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+body .mobile-navbar > a > .item.selected > .icon {
+  background-color: #3E4853;
+  color: #D9E3F2;
+}
+body .mobile-navbar > a > .item.selected > .icon .material-symbols-outlined {
+  font-variation-settings: "FILL" 1;
+}
+body > .desktop-secondary-content {
+  flex-grow: 1;
+  margin-top: 88px;
+  margin-right: 16px;
+  max-width: 752px;
+}
+body > .desktop-secondary-content > .content {
+  margin-bottom: 16px;
+}
+body > .content, body > .desktop-secondary-content {
+  display: flex;
+  flex-direction: column;
+}
+body > .content > .header, body > .desktop-secondary-content > .header {
+  background-color: rgb(26, 28, 30);
+  padding: 16px 0;
+}
+body > .content > .header > .search, body > .desktop-secondary-content > .header > .search {
+  background-color: #242A30;
+  height: 56px;
+  border-radius: 28px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+}
+body > .content > .header > .search > .text, body > .desktop-secondary-content > .header > .search > .text {
+  flex-grow: 1;
+}
+body > .content > .content, body > .desktop-secondary-content > .content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+}
+body > .content > .content::-webkit-scrollbar, body > .desktop-secondary-content > .content::-webkit-scrollbar {
+  display: none;
+}
+body > .content > .content > .details, body > .desktop-secondary-content > .content > .details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+body > .content > .content > .details > .top, body > .desktop-secondary-content > .content > .details > .top {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+body > .content > .content > .details > .top > .left, body > .desktop-secondary-content > .content > .details > .top > .left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+body > .content > .content > .details > .top > .left > .image, body > .desktop-secondary-content > .content > .details > .top > .left > .image {
+  width: 64px;
+  height: 64px;
+}
+body > .content > .content > .details > .top > .left > .temperature, body > .desktop-secondary-content > .content > .details > .top > .left > .temperature {
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 500;
+}
+body > .content > .content > .details > .top > .right, body > .desktop-secondary-content > .content > .details > .top > .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+body > .content > .content > .details > .top > .right > .date, body > .desktop-secondary-content > .content > .details > .top > .right > .date {
+  font-weight: 500;
+}
+body > .content > .content > .details > .top > .right > .time, body > .content > .content > .details > .top > .right > .top > .right > .weather, body > .desktop-secondary-content > .content > .details > .top > .right > .time, body > .desktop-secondary-content > .content > .details > .top > .right > .top > .right > .weather {
+  font-size: 14px;
+  line-height: 20px;
+}
+body > .content > .content > .details > .bottom, body > .desktop-secondary-content > .content > .details > .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 20px;
+}
+body > .content > .content > .hourly, body > .desktop-secondary-content > .content > .hourly {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+body > .content > .content > .hourly > a > .hour, body > .desktop-secondary-content > .content > .hourly > a > .hour {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  padding: 12px 16px;
+  min-width: 80px;
+  height: min-content;
+  border-radius: 12px;
+  background-color: #212529;
+}
+body > .content > .content > .hourly > a > .hour:hover, body > .desktop-secondary-content > .content > .hourly > a > .hour:hover {
+  background-color: #2d3741;
+}
+body > .content > .content > .hourly > a > .hour.selected, body > .desktop-secondary-content > .content > .hourly > a > .hour.selected {
+  background-color: #3E4853;
+}
+body > .content > .content > .hourly > a > .hour.selected:hover, body > .desktop-secondary-content > .content > .hourly > a > .hour.selected:hover {
+  background-color: #4a5460;
+}
+body > .content > .content > .week, body > .desktop-secondary-content > .content > .week {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body > .content > .content > .week > a > .day, body > .desktop-secondary-content > .content > .week > a > .day {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  align-items: center;
+  height: 88px;
+  background-color: #212529;
+  border-radius: 12px;
+}
+body > .content > .content > .week > a > .day:hover, body > .desktop-secondary-content > .content > .week > a > .day:hover {
+  background-color: #2d3741;
+}
+body > .content > .content > .week > a > .day.selected, body > .desktop-secondary-content > .content > .week > a > .day.selected {
+  background-color: #3E4853;
+}
+body > .content > .content > .week > a > .day.selected:hover, body > .desktop-secondary-content > .content > .week > a > .day.selected:hover {
+  background-color: #4a5460;
+}
+body > .content > .content > .week > a > .day > .left, body > .desktop-secondary-content > .content > .week > a > .day > .left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+body > .content > .content > .week > a > .day > .left > .date, body > .desktop-secondary-content > .content > .week > a > .day > .left > .date {
+  font-weight: 500;
+}
+body > .content > .content > .week > a > .day > .left > .weather, body > .desktop-secondary-content > .content > .week > a > .day > .left > .weather {
+  font-size: 14px;
+  line-height: 20px;
+}
+body > .content > .content > .week > a > .day > .right, body > .desktop-secondary-content > .content > .week > a > .day > .right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+body > .content > .content > .week > a > .day > .right > .temperature, body > .desktop-secondary-content > .content > .week > a > .day > .right > .temperature {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+body > .content > .content > .week > a > .day > .right > .temperature > .low, body > .desktop-secondary-content > .content > .week > a > .day > .right > .temperature > .low {
+  color: rgba(227, 226, 228, 0.38);
+}
+body > .content > .content > .week > a > .day > .right > .image, body > .desktop-secondary-content > .content > .week > a > .day > .right > .image {
+  width: 48px;
+  height: 48px;
+}
+body > .content > .content > .location, body > .desktop-secondary-content > .content > .location {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body > .content > .content > .location > a > .location, body > .desktop-secondary-content > .content > .location > a > .location {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #212529;
+  position: relative;
+}
+body > .content > .content > .location > a > .location.selected, body > .desktop-secondary-content > .content > .location > a > .location.selected {
+  background-color: #3E4853;
+}
+body > .content > .content > .location > a > .location > .button, body > .desktop-secondary-content > .content > .location > a > .location > .button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+body > .content > .content > .location > a > .location > .top, body > .desktop-secondary-content > .content > .location > a > .location > .top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: 500;
+}
+body > .content > .content > .location > a > .location > .top > .weather, body > .desktop-secondary-content > .content > .location > a > .location > .top > .weather {
+  display: flex;
+  gap: 12px;
+  font-size: 48px;
+  line-height: 48px;
+}
+body > .content > .content > .location > a > .location > .top > .weather > .image, body > .desktop-secondary-content > .content > .location > a > .location > .top > .weather > .image {
+  width: 40px;
+  height: 40px;
+}
+body > .content > .content > .location > a > .location > .bottom, body > .desktop-secondary-content > .content > .location > a > .location > .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+body > .content > .content > .location > a > .location > .bottom > .left, body > .desktop-secondary-content > .content > .location > a > .location > .bottom > .left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 20px;
+}
+body > .content > .content > .location > a > .location > .bottom > .right, body > .desktop-secondary-content > .content > .location > a > .location > .bottom > .right {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  align-items: flex-end;
+}
+body > .content > .content > .location > a > .location > .bottom > .right > .low, body > .desktop-secondary-content > .content > .location > a > .location > .bottom > .right > .low {
+  color: rgba(227, 226, 228, 0.38);
+}
+
+/* Desktop */
+@media only screen and (min-width: 640px) {
+  body > .mobile-navbar {
+    display: none;
+  }
+  body > .content {
+    max-width: 752px;
+    min-width: 368px;
+    flex-grow: 1;
+    margin-right: 16px;
+  }
+  body > .content > .content {
+    padding-bottom: 16px;
+  }
+}
+/* Mobile */
+@media only screen and (max-width: 640px) {
+  body > .desktop-navbar, body > .desktop-secondary-content {
+    display: none;
+  }
+  body > .content {
+    width: 100%;
+  }
+  body > .content > .header {
+    padding: 16px;
+  }
+  body > .content > .content {
+    padding: 0 16px;
+    padding-bottom: 96px;
+  }
+}

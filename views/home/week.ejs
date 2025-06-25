@@ -1,0 +1,19 @@
+<div class="week">
+    <% days.forEach((day) => { %>
+    <a href="<%=day.link%>">
+        <div class="day <%=day.selected%>">
+            <div class="left">
+                <div class="date"><%=day.date%></div>
+                <div class="weather"><%=day.weather%></div>
+            </div>
+            <div class="right">
+                <div class="temperature">
+                    <div class="high"><%=day.high%>°</div>
+                    <div class="low"><%=day.low%>°</div>
+                </div>
+                <div class="image"><img src="/public/images/weather/<%=day.icon%>.png" alt="<%=day.icon_alt%>"></div>
+            </div>
+        </div>
+    </a>
+    <% }) %>
+</div>

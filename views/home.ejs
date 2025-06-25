@@ -1,0 +1,17 @@
+<%- include("header.ejs") -%>
+<div class="content">
+    <div class="header">
+        <div class="search">
+            <div class="icon"><span class="material-symbols-outlined">search</span></div>
+            <div class="text">Search locations</div>
+            <div class="icon"><span class="material-symbols-outlined">more_vert</span></div>
+        </div>
+    </div>
+    <div class="content">
+        <%- include("home/details.ejs", {details:details}) -%>
+        <%- include("home/hourly.ejs", {hours:hours}) -%>
+        <%- include("home/week.ejs", {days:days}) -%>
+    </div>
+</div>
+<div class="desktop-secondary-content"></div>
+<%- include("footer") -%>

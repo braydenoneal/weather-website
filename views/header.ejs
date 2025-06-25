@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/weather.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,-25" />
+</head>
+<body>
+<div class="desktop-navbar">
+    <div class="header">
+        <div class="text">Weather</div>
+        <div class="icon"><span class="material-symbols-outlined">menu_open</span></div>
+    </div>
+    <a href="#">
+        <div class="button <%= typeof navbar_button_hidden === "undefined" ? "hidden" : "" %>">
+            <div class="icon"><span class="material-symbols-outlined">add</span></div>
+            <div class="text"><%= typeof navbar_button_text === "undefined" ? "" : navbar_button_text %></div>
+        </div>
+    </a>
+    <a href="/">
+        <div class="item <%= navbar_selected_item === "home" ? "selected" : "" %>">
+            <div class="icon"><span class="material-symbols-outlined">home</span></div>
+            <div class="text">Home</div>
+        </div>
+    </a>
+    <a href="/places">
+        <div class="item <%= navbar_selected_item === "places" ? "selected" : "" %>">
+            <div class="icon"><span class="material-symbols-outlined">map</span></div>
+            <div class="text">Places</div>
+        </div>
+    </a>
+    <a href="/journal">
+        <div class="item <%= navbar_selected_item === "journal" ? "selected" : "" %>">
+            <div class="icon"><span class="material-symbols-outlined">menu_book</span></div>
+            <div class="text">Journal</div>
+        </div>
+    </a>
+    <div class="filler"></div>
+    <a href="/settings">
+        <div class="item <%= navbar_selected_item === "settings" ? "selected" : "" %>">
+            <div class="icon"><span class="material-symbols-outlined">settings</span></div>
+            <div class="text">Settings</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="item">
+            <div class="icon"><span class="material-symbols-outlined">login</span></div>
+            <div class="text">Sign in</div>
+        </div>
+    </a>
+</div>
+<script>
+    let navbar = document.querySelector(".desktop-navbar");
+    let navbar_state = sessionStorage.getItem("navbar_state") || "open";
+
+    function setNavbar() {
+        if (navbar_state === "closed") {
+            navbar.classList.add("small");
+            document.querySelector(".desktop-navbar>.header>.icon>span").innerHTML = "menu";
+        } else {
+            navbar.classList.remove("small");
+            document.querySelector(".desktop-navbar>.header>.icon>span").innerHTML = "menu_open";
+        }
+    }
+    
+    setNavbar();
+
+    document.querySelector(".desktop-navbar>.header>.icon").addEventListener("click", () => {
+        navbar_state = navbar_state === "closed" ? "open" : "closed";
+        sessionStorage.setItem("navbar_state", navbar_state);
+        setNavbar();
+    });
+</script>

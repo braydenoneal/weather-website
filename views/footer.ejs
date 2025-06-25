@@ -1,0 +1,22 @@
+<div class="mobile-navbar">
+    <a href="/">
+        <div class="item <%= navbar_selected_item === "home" ? "selected" : "" %>">
+            <div class="icon"><span class="material-symbols-outlined">home</span></div>
+            <div class="text">Home</div>
+        </div>
+    </a>
+    <a href="/places">
+        <div class="item <%= navbar_selected_item === "places" ? "selected" : "" %>">
+            <div class="icon"><span class="material-symbols-outlined">map</span></div>
+            <div class="text">Places</div>
+        </div>
+    </a>
+    <a href="/journal">
+        <div class="item <%= navbar_selected_item === "journal" ? "selected" : "" %>">
+            <div class="icon"><span class="material-symbols-outlined">menu_book</span></div>
+            <div class="text">Journal</div>
+        </div>
+    </a>
+</div>
+</body>
+</html>

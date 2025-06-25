@@ -1,0 +1,11 @@
+<div class="hourly">
+    <% hours.forEach((hour) => { %>
+    <a href="<%=hour.link%>">
+        <div class="hour <%=hour.selected%>">
+            <div class="time"><%=hour.time%></div>
+            <div class="image"><img src="/public/images/weather/<%=hour.icon%>.png" alt="<%=hour.icon_alt%>"></div>
+            <div class="temperature"><%=hour.temp%>°</div>
+        </div>
+    </a>
+    <% }) %>
+</div>

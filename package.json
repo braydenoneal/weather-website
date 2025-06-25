@@ -1,0 +1,34 @@
+{
+  "name": "edu.drury.mcs.duweather",
+  "version": "0.0.1",
+  "description": "Weather application developed in partial fulfillment of the requirements for CSCI 277, Application Development I.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DUCS-AppDevI/semester-project-boneal005.git"
+  },
+  "keywords": [
+    "Weather",
+    "App",
+    "node",
+    "Drury"
+  ],
+  "author": "Brayden O'Neal",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/DUCS-AppDevI/semester-project-boneal005/issues"
+  },
+  "homepage": "https://github.com/DUCS-AppDevI/semester-project-boneal005#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "geonames.js": "^3.0.6",
+    "got": "^12.5.2",
+    "sass": "^1.56.1"
+  },
+  "type": "module"
+}
