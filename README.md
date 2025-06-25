@@ -2,6 +2,8 @@
 
 Weather website using Node.js, Express, and EJS
 
+![weather.png](weather.png)
+
 ## Application Users
 
 | User Name | Description |
